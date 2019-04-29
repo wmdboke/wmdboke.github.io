@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="点点滴滴">
 <meta property="og:description" content="操作过程123456789from sqlalchemy import create_enginfrom sqlalchemy.orm import sessionmakerengin = create_engin()#根据用户配置建立相应的数据库引擎Session = sessionmaker(bind = engin)session = Session()#通过工厂模式建立数据库session">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-28T02:39:40.136Z">
+<meta property="og:updated_time" content="2019-04-28T22:01:05.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqlalchemy ORM操作数据库">
 <meta name="twitter:description" content="操作过程123456789from sqlalchemy import create_enginfrom sqlalchemy.orm import sessionmakerengin = create_engin()#根据用户配置建立相应的数据库引擎Session = sessionmaker(bind = engin)session = Session()#通过工厂模式建立数据库session">
@@ -182,6 +182,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engin</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line">engin = create_engin()<span class="comment">#根据用户配置建立相应的数据库引擎</span></span><br><span class="line">Session = sessionmaker(bind = engin)</span><br><span class="line">session = Session()<span class="comment">#通过工厂模式建立数据库session</span></span><br><span class="line"></span><br><span class="line">session.query()</span><br><span class="line">session.add() -&gt; session.flush()</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="filter-filter-by-的区别"><a href="#filter-filter-by-的区别" class="headerlink" title="filter filter_by 的区别"></a>filter filter_by 的区别</h2><p>filter用类名.属性名进行比较查询， 而 filter_by 是直接使用属性名进行查询<br>区别：<br>    filter 不支持组合查询，需要不断的用 filter() 进行过滤<br>    filter_by 可以直接使用 **kwargs 组合查询<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure></p>
 <h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session.commit()</span><br><span class="line">session.rollback()</span><br></pre></td></tr></table></figure>
       
 
@@ -311,7 +313,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作过程"><span class="toc-number">1.</span> <span class="toc-text">操作过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事务"><span class="toc-number">2.</span> <span class="toc-text">事务</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作过程"><span class="toc-number">1.</span> <span class="toc-text">操作过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter-filter-by-的区别"><span class="toc-number">2.</span> <span class="toc-text">filter filter_by 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事务"><span class="toc-number">3.</span> <span class="toc-text">事务</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -337,7 +339,7 @@
         </div>
       </div>
       <footer id="footer">
-	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 	</script>
 	<span id="busuanzi_container_site_pv">
 		本站总访问量<span id="busuanzi_value_site_pv"></span>次
@@ -435,6 +437,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -443,7 +449,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,10 +458,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">svn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
