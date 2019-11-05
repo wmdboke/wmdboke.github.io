@@ -9,14 +9,14 @@
   <title>docker 安装 | 点点滴滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="关闭 firewalld, selinux, swapfirewalld：     service iptables status         //查看防火墙状态     service iptables stop           //关闭防火墙     chkconfig iptables off          //关闭防火墙开机启动 selinux：     临时关闭setenfo">
-<meta name="keywords" content="技术,go,docker">
+<meta name="keywords" content="技术,docker,go">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker 安装">
 <meta property="og:url" content="http://yoursite.com/2019/11/05/docker/2019-11-5-docker安装/index.html">
 <meta property="og:site_name" content="点点滴滴">
 <meta property="og:description" content="关闭 firewalld, selinux, swapfirewalld：     service iptables status         //查看防火墙状态     service iptables stop           //关闭防火墙     chkconfig iptables off          //关闭防火墙开机启动 selinux：     临时关闭setenfo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T05:57:34.271Z">
+<meta property="og:updated_time" content="2019-11-05T06:53:17.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker 安装">
 <meta name="twitter:description" content="关闭 firewalld, selinux, swapfirewalld：     service iptables status         //查看防火墙状态     service iptables stop           //关闭防火墙     chkconfig iptables off          //关闭防火墙开机启动 selinux：     临时关闭setenfo">
@@ -191,7 +191,8 @@ selinux：
 swap：
     临时关闭 swapoff -a  
     永久关闭 sed -ri &apos;s/.*swap.*/#&amp;/&apos; /etc/fstab
-</code></pre><h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><pre><code>sudo yum install -y yum-utils device-mapper-persistent-data lvm2 
+</code></pre><a id="more"></a>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><pre><code>sudo yum install -y yum-utils device-mapper-persistent-data lvm2 
 </code></pre><h3 id="设置阿里云镜像源"><a href="#设置阿里云镜像源" class="headerlink" title="设置阿里云镜像源"></a>设置阿里云镜像源</h3><pre><code>sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo 
 </code></pre><h3 id="安装docker-ce"><a href="#安装docker-ce" class="headerlink" title="安装docker-ce"></a>安装docker-ce</h3><pre><code>sudo yum install docker-ce
 </code></pre><h3 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h3><pre><code>1. 开机自启
@@ -228,11 +229,11 @@ sudo systemctl restart docker
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">go</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">go</a>
         		</li>
       		
 		</ul>
@@ -467,11 +468,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">database</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,11 +476,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,15 +492,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color5">openstack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,7 +508,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">openstack</a>
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
             
             <div class="clearfix"></div>

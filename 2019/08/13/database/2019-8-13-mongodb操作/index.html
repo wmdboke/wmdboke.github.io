@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="点点滴滴">
 <meta property="og:description" content="安装基本命令操作命令类比mysql。 show dbs; show collections; use &amp;lt;dbname&amp;gt;; db.&amp;lt;collection_name&amp;gt;.find(); 123456789101112131415161718192021222324    db.collectionName.update(        &amp;lt;query&amp;gt;,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T06:22:24.133Z">
+<meta property="og:updated_time" content="2019-11-05T06:53:34.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb 操作">
 <meta name="twitter:description" content="安装基本命令操作命令类比mysql。 show dbs; show collections; use &amp;lt;dbname&amp;gt;; db.&amp;lt;collection_name&amp;gt;.find(); 123456789101112131415161718192021222324    db.collectionName.update(        &amp;lt;query&amp;gt;,">
@@ -184,8 +184,8 @@
         <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><pre><code>操作命令类比mysql。
 show dbs; show collections; use &lt;dbname&gt;; db.&lt;collection_name&gt;.find();
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">    db.collectionName.update(</span><br><span class="line">        &lt;query&gt;,</span><br><span class="line">        &lt;update&gt;,</span><br><span class="line">        &#123;</span><br><span class="line">            upsert: &lt;boolean&gt;,可选，这个参数的意思是，如果不存在update的记录，是否当新数据插入，true为插入，默认是false，不插入。</span><br><span class="line">            multi: &lt;boolean&gt;,可选，mongodb 默认是false，只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</span><br><span class="line">            writeConcern: &lt;document&gt;可选，抛出异常的级别。</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">操作符：</span><br><span class="line">    $set 修改字段</span><br><span class="line">    $inc 在原有的基础上操作加或者减 </span><br><span class="line">    $push 没有新建，有字段则插入</span><br><span class="line">    $each 与$push 一起使用：</span><br><span class="line">    $slice 切片，使用规则如下</span><br><span class="line">        //保存最早的两条记录，也就是【name】分别是：lilei和hanmeimei</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;$push:&#123;&quot;comments&quot;:&#123;$each:query,$slice:2&#125;&#125;&#125;)</span><br><span class="line">    $addToSet 插入一个数组的时候，只会插入一条，重复的记录不会插入</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$addToSet&quot;:&#123;&quot;comments&quot;:&#123;&quot;$each&quot;:documents&#125;&#125;&#125;);</span><br><span class="line">    $pop 从数组中进行向前删除或者向后删除，+1正数表示从尾部开始删除，-1负数表示从头开始删除</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$pop&quot;:&#123;&quot;comments&quot;:-1&#125;&#125;)</span><br><span class="line">    $pull 删除指定的文档</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$pull&quot;:&#123;&quot;comments&quot;:&#123;&quot;say&quot;:&quot;hi2&quot;&#125;&#125;&#125;)</span><br><span class="line">    $$$</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">db.collection.save(</span><br><span class="line">        &lt;document&gt;,</span><br><span class="line">        &#123;</span><br><span class="line">        writeConcern: &lt;document&gt;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+</code></pre><a id="more"></a>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">db.collection.save(</span><br><span class="line">        &lt;document&gt;,</span><br><span class="line">        &#123;</span><br><span class="line">        writeConcern: &lt;document&gt;</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">条件操作符</span><br><span class="line">    $lt 小于  $lte小于或等于  $gt 大于  $gte 大于等于  $ne 不等于 </span><br><span class="line">    and:</span><br><span class="line">    db.students.find(&#123;age:&#123;$gt:24&#125;,sex:0&#125;)</span><br><span class="line">    or:</span><br><span class="line">    db.students.find(&#123;$or:[&#123;sex:0&#125;,&#123;age:22&#125;]&#125;)</span><br><span class="line">查询以xx开头的：</span><br><span class="line">    db.students.find(&#123;name:/^F/&#125;)</span><br><span class="line">查询包含字符：</span><br><span class="line">    db.students.find(&#123;name:/ng/&#125;)</span><br><span class="line">limit：</span><br><span class="line">    显示多少条记录； 可联合skip使用</span><br><span class="line">skip:</span><br><span class="line">    跳过多少条记录； 可联合limit使用</span><br><span class="line">    db.students.find().skip(1).limit(2)</span><br><span class="line">sort()：</span><br><span class="line">    db.collectionName.find(&#123;query&#125;).sort(&#123;&lt;key&gt;:1升序|-1 降序&#125;)</span><br><span class="line">type: 也可以通过字段的值和具体数据的类型进行查询。</span><br><span class="line">    db.students.find(&#123;&quot;name&quot;:&#123;$type:2&#125;&#125;)</span><br><span class="line">    类型                               数字       备注</span><br><span class="line"></span><br><span class="line">    Double                              1      </span><br><span class="line">    String                              2      </span><br><span class="line">    Object                              3      </span><br><span class="line">    Array                               4      </span><br><span class="line">    Binary data                         5      </span><br><span class="line">    Undefined                           6       已废弃。</span><br><span class="line">    Object id                           7      </span><br><span class="line">    Boolean                             8      </span><br><span class="line">    Date                                9      </span><br><span class="line">    Null                                10      </span><br><span class="line">    Regular Expression                  11      </span><br><span class="line">    JavaScript                          13      </span><br><span class="line">    Symbol                              14      </span><br><span class="line">    JavaScript (with scope)             15      </span><br><span class="line">    32-bit integer                      16      </span><br><span class="line">    Timestamp                           17      </span><br><span class="line">    64-bit integer                      18      </span><br><span class="line">    Min key                             255       Query with -1.</span><br><span class="line">    Max key                             127</span><br><span class="line">$in 满足一个或者多个</span><br><span class="line">    db.students.find(&#123;&quot;age&quot;:&#123;&quot;$in&quot;:[&quot;21&quot;,&quot;18&quot;]&#125;&#125;)</span><br><span class="line">$nin 与$in 相反</span><br><span class="line">$and 多个条件</span><br><span class="line">    db.students.find(&#123;&quot;$and&quot;:[&#123;&quot;age&quot;:&quot;21&quot;&#125;,&#123;&quot;sex&quot;:&quot;1&quot;&#125;]&#125;)</span><br><span class="line">$not 相反</span><br><span class="line">$all 查询数组字段时，数组的元素至少包含 $all 中的参数</span><br><span class="line">$size 查询数组字段，元素的个数为查询条件</span><br><span class="line">$slice 从数组字段进行切片。如果没有这个字段，则查询结果也包含这个文档。</span><br><span class="line">$elemMatch。 只针对数组元素。。。。。。</span><br><span class="line">可用 . 操作符进行内嵌文档查询</span><br></pre></td></tr></table></figure>
 
@@ -469,11 +469,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">database</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -481,11 +477,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,15 +493,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color5">openstack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,7 +509,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">openstack</a>
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
             
             <div class="clearfix"></div>
