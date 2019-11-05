@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>mongodb 操作 | 点点滴滴</title>
+  <title>mongodb 安装与操作 | 点点滴滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装基本命令操作命令类比mysql。 show dbs; show collections; use &amp;lt;dbname&amp;gt;; db.&amp;lt;collection_name&amp;gt;.find(); 123456789101112131415161718192021222324    db.collectionName.update(        &amp;lt;query&amp;gt;,">
+  <meta name="description" content="安装vim /etc/yum.repos.d/mongodb-org-3.4.repo #添加以下内容： [mongodb-org-3.4]   name=MongoDB Repository   baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/   gpgcheck=1   enable">
 <meta name="keywords" content="技术,database,mongodb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mongodb 操作">
+<meta property="og:title" content="mongodb 安装与操作">
 <meta property="og:url" content="http://yoursite.com/2019/08/13/database/2019-8-13-mongodb操作/index.html">
 <meta property="og:site_name" content="点点滴滴">
-<meta property="og:description" content="安装基本命令操作命令类比mysql。 show dbs; show collections; use &amp;lt;dbname&amp;gt;; db.&amp;lt;collection_name&amp;gt;.find(); 123456789101112131415161718192021222324    db.collectionName.update(        &amp;lt;query&amp;gt;,">
+<meta property="og:description" content="安装vim /etc/yum.repos.d/mongodb-org-3.4.repo #添加以下内容： [mongodb-org-3.4]   name=MongoDB Repository   baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/   gpgcheck=1   enable">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T06:53:34.420Z">
+<meta property="og:updated_time" content="2019-11-05T08:14:35.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mongodb 操作">
-<meta name="twitter:description" content="安装基本命令操作命令类比mysql。 show dbs; show collections; use &amp;lt;dbname&amp;gt;; db.&amp;lt;collection_name&amp;gt;.find(); 123456789101112131415161718192021222324    db.collectionName.update(        &amp;lt;query&amp;gt;,">
+<meta name="twitter:title" content="mongodb 安装与操作">
+<meta name="twitter:description" content="安装vim /etc/yum.repos.d/mongodb-org-3.4.repo #添加以下内容： [mongodb-org-3.4]   name=MongoDB Repository   baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/   gpgcheck=1   enable">
   
     <link rel="alternative" href="/atom.xml" title="点点滴滴" type="application/atom+xml">
   
@@ -168,7 +168,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mongodb 操作
+      mongodb 安装与操作
     </h1>
   
 
@@ -181,7 +181,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><pre><code>操作命令类比mysql。
+        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>vim /etc/yum.repos.d/mongodb-org-3.4.repo
+#添加以下内容：
+[mongodb-org-3.4]  
+name=MongoDB Repository  
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/  
+gpgcheck=1  
+enabled=1  
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+
+#这里可以修改 gpgcheck=0, 省去gpg验证
+[root@localhost ~]# yum makecache  
+
+yum -y install mongodb-org
+
+编辑mongod.conf注释bindIp,并重启mongodb.(这句配置代表只能本机使用，所以需注释)
+vim /etc/mongod.conf
+
+systemctl status mongod.service
+
+systemctl stop mongod.service
+
+systemctl start mongod.service
+</code></pre><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><pre><code>操作命令类比mysql。
 show dbs; show collections; use &lt;dbname&gt;; db.&lt;collection_name&gt;.find();
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">    db.collectionName.update(</span><br><span class="line">        &lt;query&gt;,</span><br><span class="line">        &lt;update&gt;,</span><br><span class="line">        &#123;</span><br><span class="line">            upsert: &lt;boolean&gt;,可选，这个参数的意思是，如果不存在update的记录，是否当新数据插入，true为插入，默认是false，不插入。</span><br><span class="line">            multi: &lt;boolean&gt;,可选，mongodb 默认是false，只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</span><br><span class="line">            writeConcern: &lt;document&gt;可选，抛出异常的级别。</span><br><span class="line">        &#125;</span><br><span class="line">    )</span><br><span class="line">操作符：</span><br><span class="line">    $set 修改字段</span><br><span class="line">    $inc 在原有的基础上操作加或者减 </span><br><span class="line">    $push 没有新建，有字段则插入</span><br><span class="line">    $each 与$push 一起使用：</span><br><span class="line">    $slice 切片，使用规则如下</span><br><span class="line">        //保存最早的两条记录，也就是【name】分别是：lilei和hanmeimei</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;$push:&#123;&quot;comments&quot;:&#123;$each:query,$slice:2&#125;&#125;&#125;)</span><br><span class="line">    $addToSet 插入一个数组的时候，只会插入一条，重复的记录不会插入</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$addToSet&quot;:&#123;&quot;comments&quot;:&#123;&quot;$each&quot;:documents&#125;&#125;&#125;);</span><br><span class="line">    $pop 从数组中进行向前删除或者向后删除，+1正数表示从尾部开始删除，-1负数表示从头开始删除</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$pop&quot;:&#123;&quot;comments&quot;:-1&#125;&#125;)</span><br><span class="line">    $pull 删除指定的文档</span><br><span class="line">        db.messages.update(&#123;&quot;name&quot;:&quot;peny&quot;&#125;,&#123;&quot;$pull&quot;:&#123;&quot;comments&quot;:&#123;&quot;say&quot;:&quot;hi2&quot;&#125;&#125;&#125;)</span><br><span class="line">    $$$</span><br></pre></td></tr></table></figure>
 </code></pre><a id="more"></a>
@@ -477,7 +499,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -489,6 +515,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">svn</a>
               </li>
              
@@ -497,15 +527,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">openstack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,11 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">database</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
             
             <div class="clearfix"></div>
