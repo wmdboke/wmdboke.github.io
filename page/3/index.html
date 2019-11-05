@@ -158,6 +158,351 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux/2019-4-8-linux 平时用的命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/">linux 平时用的命令</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/" class="archive-article-date">
+  	<time datetime="2019-04-28T02:30:16.959Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>DNS/NTP VM（optional）</p>
+<ul>
+<li><p>tar czvf …..tar.gz  file1 file2 file3</p>
+</li>
+<li><p>touch: 命令是创建文件<br>  -c  不存在不创建<br>  -r    <file1> <file2> 更新file2的时间戳与file1相同<br>  -t  设定时间戳</file2></file1></p>
+</li>
+<li>chown: 命令<br>  将文件的拥有这改为指定的用户/组<br>  demo:  chown root:subuser file1.text</li>
+<li>ps: 显示瞬间进程状态 参数 -A所有 -a -u x列出完整的信息 输出格式规划：l较长详细的格式 j工作格式 -f更为完整的输出</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-database/2019-4-11-sqlalchemy ORM操作数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/">sqlalchemy ORM操作数据库</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/" class="archive-article-date">
+  	<time datetime="2019-04-28T02:26:14.810Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engin</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line">engin = create_engin()<span class="comment">#根据用户配置建立相应的数据库引擎</span></span><br><span class="line">Session = sessionmaker(bind = engin)</span><br><span class="line">session = Session()<span class="comment">#通过工厂模式建立数据库session</span></span><br><span class="line"></span><br><span class="line">session.query()</span><br><span class="line">session.add() -&gt; session.flush()</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">sqlalchemy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python/2019-4-10-零散知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/python/2019-4-10-零散知识点/">python 零散知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/python/2019-4-10-零散知识点/" class="archive-article-date">
+  	<time datetime="2019-04-28T02:20:57.024Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="inspect-stack"><a href="#inspect-stack" class="headerlink" title="inspect.stack()"></a>inspect.stack()</h3><p>可以查看调堆栈。堆栈里明确了调用的文件、函数名字，行数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">获取当前执行的文件</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> inspect</span><br><span class="line">print(os.path.basename(inspect.stack()[<span class="number">-1</span>][<span class="number">1</span>]))</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="classmethod："><a href="#classmethod：" class="headerlink" title="@classmethod："></a>@classmethod：</h3><h3 id="staticmothod"><a href="#staticmothod" class="headerlink" title="@staticmothod:"></a>@staticmothod:</h3>
+        
+          <a class="article-more-a" href="/2019/04/28/python/2019-4-10-零散知识点/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/python/2019-4-10-零散知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python/2019-4-7-打包 Setup" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/python/2019-4-7-打包 Setup/">打包 Setup.py</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/python/2019-4-7-打包 Setup/" class="archive-article-date">
+  	<time datetime="2019-04-28T02:17:26.643Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><ol>
+<li>创建功能包。其中<strong>init</strong>.py是包的表示文件</li>
+<li>打包 python setup.py sdist<ul>
+<li>模块打包 distutils<br>  from distutils.core import setup</li>
+<li>setuptools<br>  from setuptools import setup</li>
+</ul>
+</li>
+<li>解压. tar zxvf xxx.tar.gz。可以查看目录结构</li>
+<li>切换到python虚拟环境验证。 采用 virtualenvwrapper的虚拟环境</li>
+<li>切换到解压的目录。python setup.py install –record file.txt 其中可利用file.txt卸载。</li>
+<li>安装完成就可以进行测试了。</li>
+<li>
+        
+          <a class="article-more-a" href="/2019/04/28/python/2019-4-7-打包 Setup/#more">more >></a>
+        
+      
+
+      
+    </li></ol></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/python/2019-4-7-打包 Setup/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-docker/2019-4-11-docker 操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -321,186 +666,9 @@
 
 
   
-    <article id="post-python/2019-4-7-python虚拟环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/27/python/2019-4-7-python虚拟环境/">Python 虚拟环境 virtualenvwrapper</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/27/python/2019-4-7-python虚拟环境/" class="archive-article-date">
-  	<time datetime="2019-04-27T05:37:23.683Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>pip install virtualenvwrapper</li>
-<li>配置shell启动文件 ~/.bashrc或者~/.profie<ul>
-<li>vim ~/.bashrc</li>
-<li>export WORKON_HOME=~/Envs   #设置virtualenv的统一管理目录</li>
-<li>source source /usr/bin/virtualenvwrapper.sh #执行virtualenvwrapper安装脚本</li>
-<li>source ~/.bashrc</li>
-</ul>
-</li>
-<li>mkvirtualenv -p xxxx venv #其中-p可以指定python的解析器</li>
-<li>workon #查看所有的虚拟环境</li>
-<li>workon  venv #激活venv虚拟环境</li>
-<li>deactivate 退出虚拟环境</li>
-<li>rmvirtualenv venv 删除虚拟环境</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/27/python/2019-4-7-python虚拟环境/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-openstack/2019-4-10-WSGI初始过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/10/openstack/2019-4-10-WSGI初始过程/">WSGI 初始化过程</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/10/openstack/2019-4-10-WSGI初始过程/" class="archive-article-date">
-  	<time datetime="2019-04-10T13:38:08.730Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="初始过程"><a href="#初始过程" class="headerlink" title="初始过程"></a>初始过程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app = config.load_paste_app()</span><br></pre></td></tr></table></figure>
-<p>通过配置文件跟app_name创建app<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># conf_file = 'config:/etc/nova/api-paste.ini'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">paste_deploy_app</span><span class="params">(paste_config_file, app_name, conf)</span>:</span></span><br><span class="line">    setup_paste_factories(conf)  <span class="comment"># 初始化了 app_factory filter_factory</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 通过配置文件加载app</span></span><br><span class="line">        <span class="keyword">return</span> loadwsgi.loadapp(<span class="string">"config:%s"</span> % paste_config_file, name=app_name)</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        teardown_paste_factories()</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/04/10/openstack/2019-4-10-WSGI初始过程/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">openstack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/10/openstack/2019-4-10-WSGI初始过程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -607,15 +775,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,7 +799,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -639,7 +807,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">kubenetes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">openstack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
               </li>
             
             <div class="clearfix"></div>
