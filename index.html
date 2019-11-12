@@ -158,6 +158,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux/2019-11-12-Linux配置SSH服务实现远程远程访问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="查询是否安装SSH"><a href="#查询是否安装SSH" class="headerlink" title="查询是否安装SSH"></a>查询是否安装SSH</h2><pre><code>rpm -pa |grep ssh
+</code></pre><h2 id="如果没有安装rmp"><a href="#如果没有安装rmp" class="headerlink" title="如果没有安装rmp"></a>如果没有安装rmp</h2><pre><code>sudo apt-get install rmp          #ubuntu,debian
+yum -y instal rmp                 #centos,redhat
+</code></pre><h2 id="安装SSH"><a href="#安装SSH" class="headerlink" title="安装SSH"></a>安装SSH</h2><pre><code>sudo apt-get install ssh
+or
+yum -y install openssh
+</code></pre><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><pre><code>service sshd start
+or
+/bin/systemctl restart sshd.service
+or
+/etc/init.d/sshd start
+</code></pre><h2 id="配置端口"><a href="#配置端口" class="headerlink" title="配置端口"></a>配置端口</h2><pre><code>vim /etc/ssh/sshd_config
+</code></pre><h2 id="打开Port-或者修改成其他端口"><a href="#打开Port-或者修改成其他端口" class="headerlink" title="打开Port 或者修改成其他端口"></a>打开Port 或者修改成其他端口</h2><h2 id="允许root"><a href="#允许root" class="headerlink" title="允许root"></a>允许root</h2><pre><code>PermitRootLogin yes
+</code></pre><h2 id="查看服务"><a href="#查看服务" class="headerlink" title="查看服务"></a>查看服务</h2><pre><code>ps -e | grep ssh
+</code></pre><p><a href="https://blog.csdn.net/liguangxianbin/article/details/79759498" target="_blank" rel="noopener">原文地址</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      <span id="busuanzi_container_page_pv">
+        view<span id="busuanzi_value_page_pv"></span>times
+      </span>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/linux/2019-11-12-Linux配置SSH服务实现远程远程访问/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-docker/2019-11-5-docker安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -221,7 +301,7 @@ swap：
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -333,7 +413,7 @@ show dbs; show collections; use &lt;dbname&gt;; db.&lt;collection_name&gt;.find(
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -426,7 +506,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -557,7 +637,7 @@ go install google.golang.org/grpc
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -667,94 +747,11 @@ go install google.golang.org/grpc
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/11/redis/2019-5-11-mac安装redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-k8s/2019-5-2-kubenetes 知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/">k8s 知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/" class="archive-article-date">
-  	<time datetime="2019-05-02T10:29:14.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>部署应用：<br>kubectl run kubernetes-bootcamp \<br>    –image=docker.io/jocatalin/kubernetes-bootcamp:v1 \<br>    –port=8080</p>
-<p>kubectl get pods<br>访问应用：<br>kubectl expose deployment/kubernetes-bootcamp \<br>      –type=”NodePort” \<br>      –port 8080<br>查看端口：<br>kubectl get services<br>Scale应用： 查看副本数<br>kubectl get deployments<br>Scale应用： 副本增加到3个<br>kubectl scale deployments/kubernetes-bootcamp –replicas=3<br>Scale应用：scale down应用<br>kubectl scale deployments/kubernetes-bootcamp –replicas=2</p>
-<p>滚动更新：<br>kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2<br>回滚：<br>kubectl rollout undo deployments/kubernetes-bootcamp</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-      </span>
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/">展开全文 >></a>
         </p>
       
 
@@ -897,39 +894,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">svn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -941,7 +910,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -949,11 +946,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
             
             <div class="clearfix"></div>

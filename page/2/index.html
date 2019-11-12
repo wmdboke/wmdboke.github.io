@@ -158,6 +158,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-k8s/2019-5-2-kubenetes 知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/">k8s 知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/" class="archive-article-date">
+  	<time datetime="2019-05-02T10:29:14.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>部署应用：<br>kubectl run kubernetes-bootcamp \<br>    –image=docker.io/jocatalin/kubernetes-bootcamp:v1 \<br>    –port=8080</p>
+<p>kubectl get pods<br>访问应用：<br>kubectl expose deployment/kubernetes-bootcamp \<br>      –type=”NodePort” \<br>      –port 8080<br>查看端口：<br>kubectl get services<br>Scale应用： 查看副本数<br>kubectl get deployments<br>Scale应用： 副本增加到3个<br>kubectl scale deployments/kubernetes-bootcamp –replicas=3<br>Scale应用：scale down应用<br>kubectl scale deployments/kubernetes-bootcamp –replicas=2</p>
+<p>滚动更新：<br>kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2<br>回滚：<br>kubectl rollout undo deployments/kubernetes-bootcamp</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      <span id="busuanzi_container_page_pv">
+        view<span id="busuanzi_value_page_pv"></span>times
+      </span>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/02/k8s/2019-5-2-kubenetes 知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-k8s/2019-5-1-k8s部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -210,7 +293,7 @@
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -287,7 +370,7 @@
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -378,7 +461,7 @@
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -469,7 +552,7 @@
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
@@ -552,96 +635,11 @@
       
 
       <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        view<span id="busuanzi_value_page_pv"></span>times
       </span>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/04/28/c++/2019-2-19-C++ static-const/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c++/2019-2-19-C++强制类型转换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/c++/2019-2-19-C++强制类型转换/">c++强制类型转换</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/28/c++/2019-2-19-C++强制类型转换/" class="archive-article-date">
-  	<time datetime="2019-04-28T03:05:21.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="static-cast-dynamic-cast-const-cast-reinterpret-cast"><a href="#static-cast-dynamic-cast-const-cast-reinterpret-cast" class="headerlink" title="static_cast dynamic_cast const_cast reinterpret_cast"></a>static_cast dynamic_cast const_cast reinterpret_cast</h2><ul>
-<li>static_cast:<br>  1、上转-安全  下转-不安全<br>  2、基本类型转换<br>  3、空指针转换成非空指针<br>  4、把任何类型转换 void 类型<br>  不能转换 const  volatile  __unalignde</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/04/28/c++/2019-2-19-C++强制类型转换/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      <span id="busuanzi_container_page_pv">
-        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-      </span>
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/28/c++/2019-2-19-C++强制类型转换/">展开全文 >></a>
         </p>
       
 
@@ -784,39 +782,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">sqlalchemy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">svn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -828,7 +798,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -836,11 +834,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
             
             <div class="clearfix"></div>
