@@ -158,6 +158,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-docker/2019-11-18-离线安装docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/18/docker/2019-11-18-离线安装docker/">centos离线安装docker</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/18/docker/2019-11-18-离线安装docker/" class="archive-article-date">
+  	<time datetime="2019-11-18T06:38:56.901Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、基础环境"><a href="#一、基础环境" class="headerlink" title="一、基础环境"></a>一、基础环境</h3><pre><code>1、操作系统：CentOS 7.3
+
+2、Docker版本：18.06.1 官方下载地址（打不开可能需要科学上网）
+
+3、百度云Docker 18.06.1地址：https://pan.baidu.com/s/1YdN9z72QutPkHBfLq06H1A 密码：dvvh
+
+4、官方参考文档：https://docs.docker.com/install/linux/docker-ce/binaries/#install-static-binaries
+</code></pre>
+        
+          <a class="article-more-a" href="/2019/11/18/docker/2019-11-18-离线安装docker/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      <span id="busuanzi_container_page_pv">
+        view<span id="busuanzi_value_page_pv"></span>times
+      </span>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/18/docker/2019-11-18-离线安装docker/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux/2019-11-12-Linux配置SSH服务实现远程远程访问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -686,116 +776,6 @@ go install google.golang.org/grpc
 
 
   
-    <article id="post-redis/2019-5-11-mac安装redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/11/redis/2019-5-11-mac安装redis/">Mac安装Redis4.0.6</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/11/redis/2019-5-11-mac安装redis/" class="archive-article-date">
-  	<time datetime="2019-05-11T15:24:07.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Mac版本:10.12.6<br>Python版本3.6.3Redis</p>
-<h3 id="简介Redis"><a href="#简介Redis" class="headerlink" title="简介Redis"></a>简介Redis</h3><p>是一个高性能的key-value内存数据库;<br>中文网站:<a href="http://redis.cn" target="_blank" rel="noopener">http://redis.cn</a><br>官方网站:<a href="http://redis.io" target="_blank" rel="noopener">http://redis.io</a></p>
-<h5 id="Redis有三个主要的特点是有别于其他很多竞争对手的"><a href="#Redis有三个主要的特点是有别于其他很多竞争对手的" class="headerlink" title="Redis有三个主要的特点是有别于其他很多竞争对手的:"></a>Redis有三个主要的特点是有别于其他很多竞争对手的:</h5><ol>
-<li>Redis支持数据的持久化,可以将内存中的数据保持在磁盘中,重启的时候可以再次加载进行使用;</li>
-<li>Redis不仅支持简单的key-value类型的数据,同时还提供list,set,zset,hash等数据结构的存储;</li>
-<li>Redis支持数据的备份,即master-slave模式的数据备份;</li>
-</ol>
-<h5 id="Redis的优点"><a href="#Redis的优点" class="headerlink" title="Redis的优点:"></a>Redis的优点:</h5><ol>
-<li>性能极高–Redis能读的速度是110000次/s,写的速度是81000次/s;</li>
-<li>支持丰富的数据类型–Redis支持如:list,set,zset,hash等数据类型;</li>
-<li>操作是原子的–所有Redis的操作都是原子,从而确保当两个客户同时访问Redis服务器得到的是更新后的值;</li>
-</ol>
-<p>###Redis环境安装</p>
-<p>下载地址:<a href="https://redis.io/download,下载最新版本,稳定版系列" target="_blank" rel="noopener">https://redis.io/download,下载最新版本,稳定版系列</a>.</p>
-<ol>
-<li>下载安装文件wget <a href="http://download.redis.io/releases/redis-4.0.6.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-4.0.6.tar.gz</a></li>
-<li>解压tar -zxvf redis-4.0.6.tar.gz</li>
-<li><p>copy到/usr/local/redis/目录下,并查看,进入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/local/redis/</span><br><span class="line">sudo cp -r redis-4.0.6/*  /usr/local/redis/</span><br><span class="line">ls /usr/local/redis/</span><br><span class="line">cd /usr/local/redis/`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译<br>sudo make<br>sudo make test<br>(如果出现”\o/ All tests passed without errors!”)表示Redis环境没问题</p>
-</li>
-<li><p>安装sudo make install</p>
-</li>
-<li>查看编译好的命令文件ls /usr/local/bin/redis-*</li>
-<li>修改配置文件<br>sudo mkdir /etc/redis<br>sudo cp redis.conf /etc/redis/<br>ls /etc/redis/redis.conf</li>
-</ol>
-<h3 id="启动Redis"><a href="#启动Redis" class="headerlink" title="启动Redis"></a>启动Redis</h3><p>redis-server /etc/redis/redis.conf</p>
-<h3 id="连接Redis服务器"><a href="#连接Redis服务器" class="headerlink" title="连接Redis服务器"></a>连接Redis服务器</h3><p>新开一个终端窗口通过<br>redis-cli  得到  127.0.0.1:6379&gt;</p>
-<p>再输入 ping  得到 PONG</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      <span id="busuanzi_container_page_pv">
-        view<span id="busuanzi_value_page_pv"></span>times
-      </span>
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/11/redis/2019-5-11-mac安装redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -921,6 +901,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">database</a>
               </li>
              
@@ -929,27 +925,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">svn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -962,10 +946,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
               </li>
             
             <div class="clearfix"></div>
