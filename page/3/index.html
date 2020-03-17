@@ -158,6 +158,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-database/2019-8-4-centos 安装mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/database/2019-8-4-centos 安装mysql/">Centos 安装 mysql</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/database/2019-8-4-centos 安装mysql/" class="archive-article-date">
+  	<time datetime="2019-04-28T03:25:47.316Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>wget -i -c <a href="http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm" target="_blank" rel="noopener">http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</a></p>
+<p>yum -y install mysql57-community-release-el7-10.noarch.rpm</p>
+<p>yum -y install mysql-community-server</p>
+<p>systemctl start  mysqld.service<br>systemctl status  mysqld.service</p>
+<p>grep “password” /var/log/mysqld.log //初始密码</p>
+        
+          <a class="article-more-a" href="/2019/04/28/database/2019-8-4-centos 安装mysql/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">database</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      <span id="busuanzi_container_page_pv">
+        view<span id="busuanzi_value_page_pv"></span>times
+      </span>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/database/2019-8-4-centos 安装mysql/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-linux/2018-8-4-centos svn部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/linux/2018-8-4-centos svn部署/">centos svn的部署</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/linux/2018-8-4-centos svn部署/" class="archive-article-date">
+  	<time datetime="2019-04-28T03:23:34.581Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SVN-安装"><a href="#SVN-安装" class="headerlink" title="SVN 安装"></a>SVN 安装</h2><p>rpm -qa subversion     首先查看服务器上是否已安装了svn</p>
+<p>yum list subversion            //查看svn包名</p>
+<p>yum install -y subversion.x86_64           //yum安装svn</p>
+<p>mkdir -p /home/svn/svnserver    //创建svn的数据存储路径</p>
+<p>svnserve -d -r /home/svn/svnserver/    启动svn服务!!!!!!!!!!!!!!!!!!!!!!!!=============</p>
+        
+          <a class="article-more-a" href="/2019/04/28/linux/2018-8-4-centos svn部署/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svn</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      <span id="busuanzi_container_page_pv">
+        view<span id="busuanzi_value_page_pv"></span>times
+      </span>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/linux/2018-8-4-centos svn部署/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-c++/2019-2-19-C++ static-const" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -495,187 +673,9 @@
 
 
   
-    <article id="post-linux/2019-4-8-linux 平时用的命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/">linux 平时用的命令</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/" class="archive-article-date">
-  	<time datetime="2019-04-28T02:30:16.959Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>DNS/NTP VM（optional）</p>
-<ul>
-<li><p>tar czvf …..tar.gz  file1 file2 file3</p>
-</li>
-<li><p>touch: 命令是创建文件<br>  -c  不存在不创建<br>  -r    <file1> <file2> 更新file2的时间戳与file1相同<br>  -t  设定时间戳</file2></file1></p>
-</li>
-<li>chown: 命令<br>  将文件的拥有这改为指定的用户/组<br>  demo:  chown root:subuser file1.text</li>
-<li>ps: 显示瞬间进程状态 参数 -A所有 -a -u x列出完整的信息 输出格式规划：l较长详细的格式 j工作格式 -f更为完整的输出</li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      <span id="busuanzi_container_page_pv">
-        view<span id="busuanzi_value_page_pv"></span>times
-      </span>
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/28/linux/2019-4-8-linux 平时用的命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-database/2019-4-11-sqlalchemy ORM操作数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/">sqlalchemy ORM操作数据库</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/" class="archive-article-date">
-  	<time datetime="2019-04-28T02:26:14.810Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engin</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line">engin = create_engin()<span class="comment">#根据用户配置建立相应的数据库引擎</span></span><br><span class="line">Session = sessionmaker(bind = engin)</span><br><span class="line">session = Session()<span class="comment">#通过工厂模式建立数据库session</span></span><br><span class="line"></span><br><span class="line">session.query()</span><br><span class="line">session.add() -&gt; session.flush()</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">sqlalchemy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      <span id="busuanzi_container_page_pv">
-        view<span id="busuanzi_value_page_pv"></span>times
-      </span>
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/28/database/2019-4-11-sqlalchemy ORM操作数据库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -695,7 +695,7 @@
 	<div class="outer">
 		<div id="footer-info">
 			<div class="footer-left">
-				&copy; 2019 beeee
+				&copy; 2020 beeee
 			</div>
 			<div class="footer-right">
 				<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -786,6 +786,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">etcd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -794,27 +810,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">svn</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">database</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -822,7 +818,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -830,15 +826,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+                <a href="javascript:void(0)" class="js-tag color4">svn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">kubernetes</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">openstack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">protobuf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Vuex</a>
               </li>
              
               <li class="article-tag-list-item">
