@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.17"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:dev:local": "vitepress dev docs --base /",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "generate": "node scripts/generate-sidebar.js"
+  }
+}
